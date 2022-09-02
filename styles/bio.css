@@ -29,6 +29,15 @@ body {
   font-family: AvenirRegular;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav-bar--container {
   display: flex;
   flex-direction: column;
@@ -38,15 +47,29 @@ body {
 .nav-bar--logo {
   max-width: 120px;
   max-height: 20px;
-  padding: 16px;
+  padding: 16px 0 0 0;
 }
 .nav-bar--menus {
   display: flex;
   justify-content: space-around;
   width: 100%;
-}
-
-.nav-bar--menus {
   color: white;
-  display: flex;
+}
+.nav-bar--menus-menu {
+  padding: 12px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.nav-bar--menus-menu:hover {
+  border-bottom: 4px white solid;
+  font-family: AvenirDemi;
+}
+.nav-bar--menus-menu:active {
+  border-bottom: 4px white solid;
+  font-family: AvenirDemi;
+}
+.nav-bar--menus-menu:visited {
+  border-bottom: 4px white solid;
+  font-family: AvenirDemi;
 }/*# sourceMappingURL=bio.css.map */

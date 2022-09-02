@@ -1,0 +1,126 @@
+@use './variables' as *;
+
+
+@font-face {
+    font-family: Avenir-regular;
+    src: url(/assets/fonts/AvenirNextLTPro-Regular.otf) format('otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir-demi;
+    src: url(/assets/fonts/AvenirNextLTPro-Demi.otf) format('otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Avenir-bold;
+    src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format('otf');
+    font-weight: 700;
+}
+
+@mixin mobile-font {
+
+    h1 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+    
+    h3 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+    }    
+}
+
+
+@mixin tablet-font {
+    h1 {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 700;
+    }
+    
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+    
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+@mixin desktop-font {
+    h1 {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 700;
+    }
+    
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+    
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+.bold {
+    font-weight: $fw-bold;
+}
+
+.semi-bold {
+    font-weight: $fw-demi;
+}

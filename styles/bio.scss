@@ -1,0 +1,7 @@
+@use './partials' as *;
+
+html {
+    margin: 0;
+    padding: 0;
+    @include mobile-font;
+}

@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Avenir-regular;
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf) format("otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir-demi;
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf) format("otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avenir-bold;
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("otf");
+  font-weight: 700;
+}
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+html h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+html h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+html h3 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+html h4 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+html h5 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}/*# sourceMappingURL=bio.css.map */

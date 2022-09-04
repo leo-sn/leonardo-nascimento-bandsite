@@ -13,12 +13,34 @@
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("OpenType");
   font-weight: 700;
 }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  min-height: 100%;
+  width: 100%;
+}
+
 .bold {
   font-weight: 700;
 }
 
 .semi-bold {
   font-weight: 600;
+}
+
+button.std-button {
+  height: 40px;
+  border-radius: 4px;
+  background-color: #323232;
+  color: white;
+  width: 100%;
+}
+button.std-button:hover {
+  background-color: #000;
 }
 
 body {
@@ -29,47 +51,89 @@ body {
   font-family: AvenirRegular;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+@media screen and (min-width: 320px) {
+  .nav-bar--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+  }
+  .nav-bar__logo-container--logo {
+    min-width: 120px;
+    min-height: 20px;
+    max-width: 120px;
+    max-height: 20px;
+    padding: 16px 0 0 0;
+  }
+  .nav-bar--menus {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: #E1E1E1;
+    height: 30px;
+    padding-top: 16px;
+  }
+  .nav-bar--menus-menu {
+    text-align: center;
+    width: 100%;
+  }
+  .nav-bar--menus-menu:hover {
+    border-bottom: 4px white solid;
+  }
+  .nav-bar--menus-menu:active {
+    border-bottom: 4px white solid;
+    font-family: AvenirDemi;
+  }
+  .hero-section {
+    height: 200px;
+    background-image: url(/assets/images/hero-bio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero-section h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 0 24px;
+  }
+  .overlay {
+    background-color: rgba(50, 50, 50, 0.5);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.nav-bar--container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #323232;
-}
-.nav-bar--logo {
-  max-width: 120px;
-  max-height: 20px;
-  padding: 16px 0 0 0;
-}
-.nav-bar--menus {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  color: white;
-}
-.nav-bar--menus-menu {
-  padding: 12px;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-}
-.nav-bar--menus-menu:hover {
-  border-bottom: 4px white solid;
-  font-family: AvenirDemi;
-}
-.nav-bar--menus-menu:active {
-  border-bottom: 4px white solid;
-  font-family: AvenirDemi;
-}
-.nav-bar--menus-menu:visited {
-  border-bottom: 4px white solid;
-  font-family: AvenirDemi;
+@media screen and (min-width: 768px) {
+  .nav-bar--container {
+    flex-direction: row;
+    height: 70px;
+  }
+  .nav-bar__logo-container--logo {
+    padding: 0 36px;
+  }
+  .nav-bar--menus {
+    height: 100%;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .nav-bar--menus-menu {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1px 36px;
+    padding: 25px 0;
+  }
+  .nav-bar--menus-menu:hover {
+    border-bottom: 4px white solid;
+  }
+  .nav-bar--menus-menu:active {
+    border-bottom: none;
+  }
+  .hero-section {
+    height: 600px;
+  }
 }/*# sourceMappingURL=bio.css.map */

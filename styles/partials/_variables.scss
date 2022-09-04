@@ -1,13 +1,153 @@
 
-//screen size variable definitions
+@font-face {
+    font-family: AvenirRegular;
+    src: url(/assets/fonts/AvenirNextLTPro-Regular.otf) format("OpenType");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: AvenirDemi;
+    src: url(/assets/fonts/AvenirNextLTPro-Demi.otf) format('OpenType');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: AvenirBold;
+    src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format('OpenType');
+    font-weight: 700;
+}
 
 $screen-mobile: 320px;
-
 $screen-tablet: 768px;
-
 $screen-desktop: 1280px;
-
 
 $fw-regular: 400;
 $fw-demi: 600;
 $fw-bold: 700;
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    min-height: 100%;
+    width: 100%;
+}
+
+@mixin mobile-font {
+
+    h1 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+    
+    h3 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+    }    
+}
+
+
+@mixin tablet-font {
+
+    .std-button {
+        min-width: 150px;
+        padding: 0 32px
+    }
+
+    
+    h1 {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 700;
+    }
+    
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+    
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+@mixin desktop-font {
+    h1 {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 700;
+    }
+    
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+    
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    
+    h5 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+.bold {
+    font-weight: $fw-bold;
+}
+
+.semi-bold {
+    font-weight: $fw-demi;
+}
+
+

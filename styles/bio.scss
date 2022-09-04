@@ -1,22 +1,6 @@
 @use './partials' as *;
 
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 1px red dotted;
-    font-family: AvenirRegular;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    // NAVIGATION BAR
 
 .nav-bar {
 
@@ -27,7 +11,9 @@ a {
         background-color: $bandsite-black;
     }
     
-    &--logo {
+    &__logo-container--logo {
+        min-width: 120px;
+        min-height: 20px;
         max-width: 120px;
         max-height: 20px;
         padding: 16px 0 0 0;
@@ -37,18 +23,17 @@ a {
         display: flex;
         justify-content: space-around;
         width: 100%;
-        color: white;
+        color: $mercury;
+        height: 30px;
+        padding-top: 16px;
     }
 
     &--menus-menu {
-        padding: 12px;
         text-align: center;
-        height: 100%;
         width: 100%;
 
         &:hover {
             border-bottom: 4px white solid;
-            font-family: AvenirDemi;
         }
 
         &:active {
@@ -56,10 +41,76 @@ a {
             font-family: AvenirDemi;
         }
 
-        &:visited {
-            border-bottom: 4px white solid;
-            font-family: AvenirDemi;
-        }
     }
+}
+
+
+// HERO SECTION
+
+.hero-section {
+    height: 200px;
+    background-image: url(/assets/images/hero-bio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     
+    h1 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        padding: 0 24px;
+    }
+
+}
+
+.overlay {
+    background-color: rgba(50, 50, 50, 0.5);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+@include tablet {
+    .nav-bar {
+        &--container {
+            flex-direction: row;
+            height: 70px;
+        }
+
+        &__logo-container--logo {
+            padding: 0 36px;
+            // align-self: center;
+        }
+
+        &--menus {
+            height: 100%;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        &--menus-menu {
+            width: fit-content;
+            margin: 1px 36px;
+            padding: 25px 0;
+
+            &:hover {
+                border-bottom: 4px white solid;
+            }
+
+            &:active {
+                border-bottom: none;
+            }
+        }
+    } 
+
+    .hero-section {
+        height: 600px;
+    }
+
 }

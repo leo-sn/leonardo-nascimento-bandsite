@@ -145,10 +145,6 @@
     }
 }
 
-// .author {
-//     padding-top: 10px;
-// }
-
 @include tablet {
     .main-section {
         padding: 0 36px;
@@ -171,11 +167,62 @@
 
         &__content-container {
             display: flex;
-            gap: 10px;
+            gap: 30px;
         }
 
         h3 {
             padding-top: 30px;
         }
+    }
+}
+
+// PHOTO GALLERY SECTION
+
+.gallery-section {
+    padding: 24px 16px;
+    background-color: $alabaster;
+
+    h2 {
+        padding-bottom: 16px;
+        font-family: AvenirDemi;
+
+    }
+
+
+    &__photo-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &--image {
+            width: 100%;
+        }
+    }
+
+}
+
+@include tablet {
+
+    .gallery-section {
+        color: $bandsite-black;
+        padding: 48px 36px;
+
+        h2 {
+            padding-bottom: 24px;
+        }
+
+
+        &__photo-container {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            &--image {
+                width: calc(100% * (1/3) - 10px - 1px);
+            }
+        }
+
+
     }
 }

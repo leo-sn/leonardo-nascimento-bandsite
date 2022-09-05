@@ -1,9 +1,55 @@
-
+@use './colors' as *;
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border: 1px red dotted;
     font-family: AvenirRegular;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirDemi;
+}
+
+h4 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirRegular;
+}
+
+h5 {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirRegular;
+}    
+
+p {
+    line-height: 25px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }

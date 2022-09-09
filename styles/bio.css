@@ -51,38 +51,38 @@ button.std-button:hover {
 }
 
 h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-family: AvenirBold;
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-family: AvenirDemi;
 }
 
 h3 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: AvenirDemi;
 }
 
 h4 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-family: AvenirDemi;
 }
 
 h5 {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-family: AvenirRegular;
 }
 
 p {
-  font-size: 13px;
-  line-height: 25px;
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
   font-family: AvenirRegular;
 }
 
@@ -98,12 +98,12 @@ a {
   flex-direction: column;
   align-items: center;
   background-color: rgb(50, 50, 50);
-  height: 85px;
+  height: 5.3125rem;
 }
 .nav-bar__logo-container--logo {
-  min-width: 120px;
-  min-height: 20px;
-  padding: 16px 0 0 0;
+  min-width: 7.5rem;
+  min-height: 1.25rem;
+  padding: 1rem 0 0 0;
 }
 .nav-bar--menus {
   display: flex;
@@ -111,17 +111,17 @@ a {
   width: 100%;
   color: rgb(225, 225, 225);
   height: 100%;
-  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 .nav-bar--menus-menu {
   text-align: center;
   width: 50%;
   list-style: none;
-  border-bottom: 4px solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 .nav-bar--menus-menu:hover {
-  border-bottom: 4px white solid;
-  font-family: "AvenirNext";
+  border-bottom: 0.25rem white solid;
+  font-family: AvenirNext;
   font-weight: 400;
 }
 .nav-bar--menus-menu:active {
@@ -133,8 +133,8 @@ a {
 @media screen and (min-width: 768px) {
   .nav-bar--container {
     flex-direction: row;
-    height: 70px;
-    padding: 0 36px;
+    height: 4.375rem;
+    padding: 0 2.25rem;
   }
   .nav-bar__logo-container--logo {
     padding: 0;
@@ -149,49 +149,49 @@ a {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 1px 36px;
-    padding: 25px 0;
-    margin: 0 36px;
+    margin: 0.0625rem 2.25rem;
+    padding: 1.5625rem 0;
+    margin: 0 2.25rem;
   }
   .nav-bar--menus-menu:hover {
-    border-bottom: 4px white solid;
+    border-bottom: 0.25rem white solid;
   }
   .nav-bar--menus-menu:active {
     border-bottom: none;
   }
   .std-button {
-    min-width: 150px;
-    padding: 0 32px;
+    min-width: 9.375rem;
+    padding: 0 2rem;
   }
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-family: AvenirBold;
   }
   h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: AvenirBold;
   }
   h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: AvenirDemi;
   }
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-family: AvenirRegular;
   }
   h5 {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-family: AvenirRegular;
   }
 }
 @media screen and (min-width: 1280px) {
   .nav-bar--container {
-    padding: 0 63px;
+    padding: 0 3.9375rem;
   }
 }
 .hero-text {
@@ -203,149 +203,149 @@ a {
 }
 
 .hero-section {
-  height: 225px;
+  height: 14.0625rem;
   background-image: url(/assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0 16px;
+  padding: 0 1rem;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    height: 470px;
-    padding: 0 32px;
+    height: 29.375rem;
+    padding: 0 2rem;
   }
   .std-button {
-    min-width: 150px;
-    padding: 0 32px;
+    min-width: 9.375rem;
+    padding: 0 2rem;
   }
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-family: AvenirBold;
   }
   h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: AvenirBold;
   }
   h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: AvenirDemi;
   }
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-family: AvenirRegular;
   }
   h5 {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-family: AvenirRegular;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero-section {
     height: 75vh;
-    padding: 0 63px;
+    padding: 0 3.9375rem;
   }
 }
 .main-section {
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 .main-section h2 {
-  padding: 24px 0 16px 0;
+  padding: 1.5rem 0 1rem 0;
   color: rgb(50, 50, 50);
 }
 .main-section__container--image {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   width: 100%;
 }
 .main-section p {
   color: rgb(50, 50, 50);
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 .main-section h3 {
   color: rgb(50, 50, 50);
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 @media screen and (min-width: 768px) {
   .main-section {
-    padding: 0 36px;
+    padding: 0 2.25rem;
   }
   .main-section h2 {
-    padding: 48px 0 24px 0;
+    padding: 3rem 0 1.5rem 0;
   }
   .main-section__container {
     position: relative;
     left: 10%;
     width: 80%;
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
   }
   .main-section__container--image {
     width: 100%;
   }
   .main-section__content-container {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
   }
   .main-section h3 {
-    padding-top: 30px;
+    padding-top: 1.875rem;
   }
   .std-button {
-    min-width: 150px;
-    padding: 0 32px;
+    min-width: 9.375rem;
+    padding: 0 2rem;
   }
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-family: AvenirBold;
   }
   h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: AvenirBold;
   }
   h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: AvenirDemi;
   }
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-family: AvenirRegular;
   }
   h5 {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-family: AvenirRegular;
   }
 }
 @media screen and (min-width: 1280px) {
   .main-section {
-    padding: 0 63px;
+    padding: 0 3.9375rem;
   }
   .main-section h2 {
-    padding: 48px 0 36px 0px;
+    padding: 3rem 0 2.25rem 0rem;
   }
 }
 .gallery-section {
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
   background-color: rgb(250, 250, 250);
 }
 .gallery-section h2 {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   font-family: AvenirDemi;
 }
 .gallery-section__photo-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 .gallery-section__photo-container--image {
   width: 100%;
@@ -354,10 +354,10 @@ a {
 @media screen and (min-width: 768px) {
   .gallery-section {
     color: rgb(50, 50, 50);
-    padding: 48px 36px 24px 36px;
+    padding: 3rem 2.25rem 1.5rem 2.25rem;
   }
   .gallery-section h2 {
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
   }
   .gallery-section__photo-container {
     width: 100%;
@@ -365,72 +365,72 @@ a {
     flex-wrap: wrap;
   }
   .gallery-section__photo-container--image {
-    width: calc(33.3333333333% - 10px - 1px);
+    width: calc(33.3333333333% - 0.625rem - 0.0625rem);
   }
   .std-button {
-    min-width: 150px;
-    padding: 0 32px;
+    min-width: 9.375rem;
+    padding: 0 2rem;
   }
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-family: AvenirBold;
   }
   h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: AvenirBold;
   }
   h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: AvenirDemi;
   }
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-family: AvenirRegular;
   }
   h5 {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-family: AvenirRegular;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery-section {
     color: rgb(50, 50, 50);
-    padding: 48px 63px 24px 63px;
+    padding: 3rem 3.9375rem 1.5rem 3.9375rem;
   }
 }
 .footer-section {
   background-color: rgb(50, 50, 50);
   color: white;
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
 }
 .footer-section--icons {
-  padding: 14px 0;
+  padding: 0.875rem 0;
   display: flex;
   list-style-type: none;
-  gap: 30px;
+  gap: 1.875rem;
 }
 .footer-section__locations {
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
   display: flex;
   flex-direction: column;
 }
 .footer-section__locations--email {
-  margin: 16px 0;
+  margin: 1rem 0;
 }
 .footer-section__locations--address {
   padding: 0;
   line-height: 130%;
 }
 .footer-section__locations--title:nth-child(n+2) {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .footer-section__copyright {
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .footer-logo--top {
@@ -439,12 +439,12 @@ a {
 
 @media screen and (min-width: 768px) {
   .footer-section {
-    padding: 48px 36px 20px 36px;
+    padding: 3rem 2.25rem 1.25rem 2.25rem;
   }
   .footer-section__locations {
     flex-direction: row;
     justify-content: flex-start;
-    gap: 65px;
+    gap: 4.0625rem;
   }
   .footer-section__top-section {
     display: flex;
@@ -453,8 +453,8 @@ a {
   }
   .footer-section__top-section--left {
     display: flex;
-    gap: 30px;
-    padding-bottom: 30px;
+    gap: 1.875rem;
+    padding-bottom: 1.875rem;
   }
   .footer-logo--top {
     display: block;
@@ -463,38 +463,38 @@ a {
     display: none;
   }
   .std-button {
-    min-width: 150px;
-    padding: 0 32px;
+    min-width: 9.375rem;
+    padding: 0 2rem;
   }
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-family: AvenirBold;
   }
   h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: AvenirBold;
   }
   h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: AvenirDemi;
   }
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-family: AvenirRegular;
   }
   h5 {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-family: AvenirRegular;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer-section {
-    padding: 38px 63px 20px 63px;
+    padding: 2.375rem 3.9375rem 1.25rem 3.9375rem;
   }
   .footer-logo--top {
     display: block;

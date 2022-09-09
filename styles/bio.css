@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "AvenirNext";
+  font-family: AvenirRegular;
   src: url(/assets/fonts/AvenirNextLTPro-Regular.otf) format("OpenType");
   font-weight: 400;
 }
 @font-face {
-  font-family: "AvenirNext";
+  font-family: AvenirDemi;
   src: url(/assets/fonts/AvenirNextLTPro-Demi.otf) format("OpenType");
   font-weight: 600;
 }
 @font-face {
-  font-family: "AvenirNext";
+  font-family: AvenirBold;
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("OpenType");
   font-weight: 700;
 }
@@ -47,48 +47,43 @@ button.std-button:hover {
   margin: 0;
   margin: 0;
   padding: 0;
-  font-family: "AvenirNext";
-  font-weight: 400;
+  font-family: AvenirRegular;
 }
 
 h1 {
   font-size: 24px;
   line-height: 32px;
-  font-family: "AvenirNext";
-  font-weight: 700;
+  font-family: AvenirBold;
 }
 
 h2 {
   font-size: 24px;
   line-height: 32px;
-  font-family: AvenirNext;
+  font-family: AvenirDemi;
 }
 
 h3 {
   font-size: 14px;
   line-height: 22px;
-  font-family: AvenirNext;
-  font-weight: 400;
+  font-family: AvenirDemi;
 }
 
 h4 {
   font-size: 13px;
   line-height: 18px;
-  font-family: AvenirNext;
-  font-weight: 400;
+  font-family: AvenirDemi;
 }
 
 h5 {
   font-size: 13px;
   line-height: 18px;
-  font-family: AvenirNext;
-  font-weight: 400;
+  font-family: AvenirRegular;
 }
 
 p {
+  font-size: 13px;
   line-height: 25px;
-  font-family: AvenirNext;
-  font-weight: 400;
+  font-family: AvenirRegular;
 }
 
 a {
@@ -139,9 +134,10 @@ a {
   .nav-bar--container {
     flex-direction: row;
     height: 70px;
+    padding: 0 36px;
   }
   .nav-bar__logo-container--logo {
-    padding: 0 36px;
+    padding: 0;
   }
   .nav-bar--menus {
     height: 100%;
@@ -193,40 +189,6 @@ a {
     font-family: AvenirRegular;
   }
 }
-@media screen and (min-width: 768px) {
-  .nav-bar--container {
-    padding: 0 48px;
-  }
-  .std-button {
-    min-width: 150px;
-    padding: 0 32px;
-  }
-  h1 {
-    font-size: 60px;
-    line-height: 68px;
-    font-family: AvenirBold;
-  }
-  h2 {
-    font-size: 36px;
-    line-height: 44px;
-    font-family: AvenirBold;
-  }
-  h3 {
-    font-size: 24px;
-    line-height: 32px;
-    font-family: AvenirDemi;
-  }
-  p {
-    font-size: 14px;
-    line-height: 22px;
-    font-family: AvenirRegular;
-  }
-  h5 {
-    font-size: 14px;
-    line-height: 20px;
-    font-family: AvenirRegular;
-  }
-}
 .hero-text {
   z-index: 1;
   position: relative;
@@ -240,13 +202,14 @@ a {
   background-image: url(/assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0 36px;
+  padding: 0 16px;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .hero-section {
     height: 470px;
+    padding: 0 32px;
   }
   .std-button {
     min-width: 150px;
@@ -384,6 +347,89 @@ a {
   }
   .gallery-section__photo-container--image {
     width: calc(33.3333333333% - 10px - 1px);
+  }
+  .std-button {
+    min-width: 150px;
+    padding: 0 32px;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+    font-family: AvenirBold;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-family: AvenirBold;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirDemi;
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirRegular;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirRegular;
+  }
+}
+.footer-section {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  padding: 24px 16px;
+}
+.footer-section--icons {
+  padding: 14px 0;
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+.footer-section__locations {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-section__locations--email {
+  margin: 16px 0;
+}
+.footer-section__locations--address {
+  padding: 0;
+  line-height: 130%;
+}
+.footer-section__locations--title:nth-child(n+2) {
+  padding-bottom: 20px;
+}
+.footer-section__copyright {
+  font-size: 10px;
+}
+
+.footer-logo--top {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-section__locations {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 65px;
+  }
+  .footer-section__top-section {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+  .footer-logo--top {
+    display: block;
+    position: relative;
+    left: 28%;
+  }
+  .footer-logo--bottom {
+    display: none;
   }
   .std-button {
     min-width: 150px;

@@ -59,11 +59,12 @@
         &--container {
             flex-direction: row;
             height: 70px;
+            padding: 0 36px;
+        
         }
 
         &__logo-container--logo {
-            padding: 0 36px;
-            // align-self: center;
+            padding: 0;
         }
 
         &--menus {
@@ -90,15 +91,6 @@
     } 
 }
 
-@include tablet {
-    .nav-bar {
-
-        &--container {
-            padding: 0 48px;
-        }
-    }
-}
-
 // HERO SECTION
 
 .hero-text {
@@ -114,7 +106,7 @@
     background-image: url(/assets/images/hero-bio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 36px;
+    padding: 0 16px;
     position: relative;
 }
 
@@ -122,6 +114,7 @@
 
     .hero-section {
         height: 470px;
+        padding: 0 32px;
     }
 }
 
@@ -229,4 +222,76 @@
             }
         }
     }
+}
+
+
+// FOOTER SECTION
+
+.footer-section {
+    background-color: $bandsite-black;
+    color: white;
+    padding: 24px 16px;
+
+    &--icons {
+        padding: 14px 0;
+        display: flex;
+        list-style-type: none;
+        gap: 30px;
+    }
+
+    &__locations {
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;  
+
+        &--email {
+            margin: 16px 0;
+        }
+
+        &--address {
+            padding: 0;
+            line-height: 130%;
+        }
+        
+        &--title:nth-child(n+2) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__copyright {
+        font-size: 10px;
+    }
+}
+
+.footer-logo--top {
+    display: none;
+}
+
+@include tablet {
+
+    .footer-section{
+
+        &__locations {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 65px;
+        }
+
+        &__top-section {
+            display: flex;
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .footer-logo--top {
+        display: block;
+        position: relative;
+        left: 28%;
+    }
+
+    .footer-logo--bottom {
+        display: none;
+    }
+    
 }

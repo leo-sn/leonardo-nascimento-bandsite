@@ -50,41 +50,5 @@
 @mixin desktop {
     @media screen and (min-width: $screen-desktop) {
         @content;
-        h1 {
-            font-size: 60px;
-            line-height: 68px;
-            font-family: AvenirBold;
-        }
-        
-        h2 {
-            font-size: 36px;
-            line-height: 44px;
-            font-family: AvenirBold;
-        }
-        
-        h3 {
-            font-size: 24px;
-            line-height: 32px;
-            font-family: AvenirDemi;
-        }
-        
-        p {
-            font-size: 14px;
-            line-height: 22px;
-            font-family: AvenirRegular;
-            
-        }
-
-        .footer_copy {
-            line-height: 20px;
-            font-size: 14px;
-            font-family: AvenirRegular;
-        }
-        
-        h5 {
-            font-size: 14px;
-            line-height: 20px;
-            font-family: AvenirRegular;
-        }
     }
 }

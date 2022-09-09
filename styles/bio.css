@@ -189,6 +189,11 @@ a {
     font-family: AvenirRegular;
   }
 }
+@media screen and (min-width: 1280px) {
+  .nav-bar--container {
+    padding: 0 63px;
+  }
+}
 .hero-text {
   z-index: 1;
   position: relative;
@@ -239,6 +244,12 @@ a {
     font-size: 14px;
     line-height: 20px;
     font-family: AvenirRegular;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-section {
+    height: 75vh;
+    padding: 0 63px;
   }
 }
 .main-section {
@@ -314,6 +325,14 @@ a {
     font-family: AvenirRegular;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main-section {
+    padding: 0 63px;
+  }
+  .main-section h2 {
+    padding: 48px 0 36px 0px;
+  }
+}
 .gallery-section {
   padding: 24px 16px;
   background-color: rgb(250, 250, 250);
@@ -335,7 +354,7 @@ a {
 @media screen and (min-width: 768px) {
   .gallery-section {
     color: rgb(50, 50, 50);
-    padding: 48px 36px;
+    padding: 48px 36px 24px 36px;
   }
   .gallery-section h2 {
     padding-bottom: 24px;
@@ -378,6 +397,12 @@ a {
     font-family: AvenirRegular;
   }
 }
+@media screen and (min-width: 1280px) {
+  .gallery-section {
+    color: rgb(50, 50, 50);
+    padding: 48px 63px 24px 63px;
+  }
+}
 .footer-section {
   background-color: rgb(50, 50, 50);
   color: white;
@@ -413,6 +438,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .footer-section {
+    padding: 48px 36px 20px 36px;
+  }
   .footer-section__locations {
     flex-direction: row;
     justify-content: flex-start;
@@ -420,13 +448,16 @@ a {
   }
   .footer-section__top-section {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .footer-section__top-section--left {
+    display: flex;
     gap: 30px;
     padding-bottom: 30px;
   }
   .footer-logo--top {
     display: block;
-    position: relative;
-    left: 28%;
   }
   .footer-logo--bottom {
     display: none;
@@ -459,5 +490,13 @@ a {
     font-size: 14px;
     line-height: 20px;
     font-family: AvenirRegular;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-section {
+    padding: 38px 63px 20px 63px;
+  }
+  .footer-logo--top {
+    display: block;
   }
 }/*# sourceMappingURL=bio.css.map */

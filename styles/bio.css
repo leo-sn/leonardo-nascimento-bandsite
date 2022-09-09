@@ -1,15 +1,15 @@
 @font-face {
-  font-family: AvenirRegular;
+  font-family: "AvenirNext";
   src: url(/assets/fonts/AvenirNextLTPro-Regular.otf) format("OpenType");
   font-weight: 400;
 }
 @font-face {
-  font-family: AvenirDemi;
+  font-family: "AvenirNext";
   src: url(/assets/fonts/AvenirNextLTPro-Demi.otf) format("OpenType");
   font-weight: 600;
 }
 @font-face {
-  font-family: AvenirBold;
+  font-family: "AvenirNext";
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("OpenType");
   font-weight: 700;
 }
@@ -23,7 +23,7 @@
 
 .overlay {
   background-color: rgba(50, 50, 50, 0.5);
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,58 +41,61 @@ button.std-button:hover {
   background-color: rgb(0, 0, 0);
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: AvenirRegular;
-}
-
-html {
+* {
   box-sizing: border-box;
   font-size: 100%;
-}
-
-h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirNext";
+  font-weight: 400;
 }
 
 h1 {
   font-size: 24px;
   line-height: 32px;
-  font-family: AvenirBold;
+  font-family: "AvenirNext";
+  font-weight: 700;
 }
 
 h2 {
   font-size: 24px;
   line-height: 32px;
-  font-family: AvenirBold;
+  font-family: AvenirNext;
 }
 
 h3 {
   font-size: 14px;
   line-height: 22px;
-  font-family: AvenirDemi;
+  font-family: AvenirNext;
+  font-weight: 400;
 }
 
 h4 {
   font-size: 13px;
   line-height: 18px;
-  font-family: AvenirRegular;
+  font-family: AvenirNext;
+  font-weight: 400;
 }
 
 h5 {
   font-size: 13px;
   line-height: 18px;
-  font-family: AvenirRegular;
+  font-family: AvenirNext;
+  font-weight: 400;
 }
 
 p {
   line-height: 25px;
+  font-family: AvenirNext;
+  font-weight: 400;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 .nav-bar--container {
@@ -100,12 +103,11 @@ a {
   flex-direction: column;
   align-items: center;
   background-color: rgb(50, 50, 50);
+  height: 85px;
 }
 .nav-bar__logo-container--logo {
   min-width: 120px;
   min-height: 20px;
-  max-width: 120px;
-  max-height: 20px;
   padding: 16px 0 0 0;
 }
 .nav-bar--menus {
@@ -113,20 +115,24 @@ a {
   justify-content: space-around;
   width: 100%;
   color: rgb(225, 225, 225);
-  height: 34px;
+  height: 100%;
   padding-top: 8px;
 }
 .nav-bar--menus-menu {
   text-align: center;
   width: 50%;
+  list-style: none;
+  border-bottom: 4px solid transparent;
 }
 .nav-bar--menus-menu:hover {
   border-bottom: 4px white solid;
-  font-family: AvenirBold;
+  font-family: "AvenirNext";
+  font-weight: 400;
 }
 .nav-bar--menus-menu:active {
   border-bottom: 4px white solid;
-  font-family: AvenirDemi;
+  font-family: AvenirNext;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
@@ -149,6 +155,7 @@ a {
     width: fit-content;
     margin: 1px 36px;
     padding: 25px 0;
+    margin: 0 36px;
   }
   .nav-bar--menus-menu:hover {
     border-bottom: 4px white solid;
@@ -220,18 +227,21 @@ a {
     font-family: AvenirRegular;
   }
 }
+.hero-text {
+  z-index: 1;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
 .hero-section {
   height: 225px;
   background-image: url(/assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-}
-.hero-section h1 {
+  padding: 0 36px;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  padding: 0 24px;
 }
 
 @media screen and (min-width: 768px) {

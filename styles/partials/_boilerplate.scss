@@ -1,55 +1,58 @@
 @use './colors' as *;
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: AvenirRegular;
-}
-
-html {
+* {
     box-sizing: border-box;
     font-size: 100%;
-}
-
-h1, h2, h3, h4, h5, h6, p {
+    margin:0;
     margin: 0;
+    padding: 0;
+    font-family: 'AvenirNext';
+    font-weight: 400;
 }
 
 h1 {
     font-size: 24px;
     line-height: 32px;
-    font-family: AvenirBold;
+    font-family: 'AvenirNext';
+    font-weight: 700;
 }
 
 h2 {
     font-size: 24px;
     line-height: 32px;
-    font-family: AvenirBold;
+    font-family: AvenirNext;
 }
 
 h3 {
     font-size: 14px;
     line-height: 22px;
-    font-family: AvenirDemi;
+    font-family: AvenirNext;
+    font-weight: 400;
 }
 
 h4 {
     font-size: 13px;
     line-height: 18px;
-    font-family: AvenirRegular;
+    font-family: AvenirNext;
+    font-weight: 400;
 }
 
 h5 {
     font-size: 13px;
     line-height: 18px;
-    font-family: AvenirRegular;
+    font-family: AvenirNext;
+    font-weight: 400;
 }    
 
 p {
     line-height: 25px;
+    font-family: AvenirNext;
+    font-weight: 400;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+    width: 100%;
+    height: 100%;
 }

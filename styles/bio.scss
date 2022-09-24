@@ -353,3 +353,84 @@
     }
 
 }
+
+
+// COMMENT SECTION STARTS HERE
+
+
+.comment-section {
+    padding: 1.5rem 1rem;
+    background-color: white;
+    color: $bandsite-black;
+
+    &__image-container {
+        margin-right: 10px;
+        padding-top: 10px;
+    }
+
+
+    .profile-image {
+        width: 36px;
+        height: 36px;
+        background-image: url(../assets/images/Mohan-muruge.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        background-color: $mercury;
+    }
+
+
+    &__submit-container {
+        display: flex;
+    }
+
+    &__form-container {
+        width: 100%;
+    }
+
+    .comment-form {
+        width: 100%;
+
+        input {
+            border: 1px solid;
+            margin: 4px 0 10px 0;
+            height: 36px;
+            width: 100%;
+            border-radius: 4px;
+            border-color: $mercury;
+            padding: 12px;
+            font-size: 12px;
+            background-color: $alabaster;
+            
+
+            &:active {
+                border-color: black;
+            }
+        }
+
+        textarea {
+            border: 1px solid;
+            margin: 4px 0 10px 0;
+            height: 100px;
+            width: 100%;
+            border-radius: 4px;
+            border-color: $mercury;
+            padding: 12px;
+            font-size: 12px;
+            resize: none;
+            background-color: $alabaster;
+
+        }
+
+        &--input-label {
+        color: $mercury;
+        font-size: 10px;
+        }
+
+        &--button {
+            margin-top: 10px;
+        }
+
+    }
+}
+  
+

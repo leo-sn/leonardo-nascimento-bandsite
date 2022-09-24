@@ -6,6 +6,7 @@ button.std-button {
     background-color: $bandsite-black;
     color: white;
     width: 100%;
+    border: 1px solid;
 
     &:hover {
         background-color: $bandsite-darkblack;

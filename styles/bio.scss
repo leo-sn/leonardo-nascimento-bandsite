@@ -433,5 +433,71 @@
     }
 
 }
-  
+
+@include tablet {
+
+    .comment-section {
+        padding: 48px 36px 48px 24px;
+
+        .profile-image {
+            width: 48px;
+            height: 48px;
+        }
+
+        &__container {
+            padding: 0 8%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-family: AvenirDemi;
+        }
+
+        &__image-container {
+
+            padding-top: 4%;
+        }
+
+        &__image-container {
+            padding-top: 5px;
+        }
+
+        .comment-form {
+            input {
+                height: 48px;
+            }
+        }
+
+    }
+
+
+    button.std-button {
+        width: 10%;
+        float: right;
+    }
+
+}
+
+
+@include desktop {
+    .comment-section {
+
+        padding: 48px 63px 24px 63px;
+
+        &__container {
+            padding: 1% 30%;
+        }
+
+        .comment-form {
+            input {
+                height: 48px;
+            }
+        }
+    }
+
+    #form-profile-image {
+        padding-top: 23px;
+    }
+}
+
 

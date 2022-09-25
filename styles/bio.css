@@ -598,4 +598,77 @@ a {
 }
 .comment-section .comment-form--button {
   margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .comment-section {
+    padding: 48px 36px 48px 24px;
+  }
+  .comment-section .profile-image {
+    width: 48px;
+    height: 48px;
+  }
+  .comment-section__container {
+    padding: 0 8%;
+  }
+  .comment-section h2 {
+    margin-bottom: 20px;
+    font-family: AvenirDemi;
+  }
+  .comment-section__image-container {
+    padding-top: 4%;
+  }
+  .comment-section__image-container {
+    padding-top: 5px;
+  }
+  .comment-section .comment-form input {
+    height: 48px;
+  }
+  button.std-button {
+    width: 10%;
+    float: right;
+  }
+  .std-button {
+    min-width: 9.375rem;
+    padding: 0 2rem;
+  }
+  h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: AvenirBold;
+  }
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: AvenirBold;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: AvenirDemi;
+  }
+  p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: AvenirRegular;
+  }
+  h5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: AvenirRegular;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-section {
+    padding: 48px 63px 24px 63px;
+  }
+  .comment-section__container {
+    padding: 1% 30%;
+  }
+  .comment-section .comment-form input {
+    height: 48px;
+  }
+  #form-profile-image {
+    padding-top: 23px;
+  }
 }/*# sourceMappingURL=bio.css.map */

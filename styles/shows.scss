@@ -1,0 +1,361 @@
+@use './partials' as *;
+
+// NAVIGATION BAR
+
+.nav-bar {
+
+    &--container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $bandsite-black;
+        height: 5.3125rem;
+    }
+    
+    &__logo-container--logo {
+        min-width: 7.5rem;
+        min-height: 1.25rem;
+        padding: 1rem 0 0 0;
+    }
+
+    &--menus {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: $mercury; 
+        height: 100%;
+        padding-top: 0.5rem;
+    }
+  
+
+    &--menus-menu {
+        text-align: center;
+        width: 50%;
+        list-style: none;
+        border-bottom: 0.25rem solid transparent;
+        
+
+
+        &:hover {
+            border-bottom: 0.25rem white solid;
+            font-family: AvenirNext;
+            font-weight: 400;
+        }
+
+        &:active {
+            border-bottom: 4px white solid;
+            font-family: AvenirNext;
+            font-weight: 600;
+        }
+
+    }
+  
+}
+
+@include tablet {
+
+    .nav-bar {
+        &--container {
+            flex-direction: row;
+            height: 4.375rem;
+            padding: 0 2.25rem;
+        
+        }
+
+        &__logo-container--logo {
+            padding: 0;
+        }
+
+        &--menus {
+            height: 100%;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &--menus-menu {
+            width: fit-content;
+            margin: 0.0625rem 2.25rem;
+            padding: 1.5625rem 0;
+            margin: 0 2.25rem;
+
+            &:hover {
+                border-bottom: 0.25rem white solid;
+            }
+
+            &:active {
+                border-bottom: none;
+            }
+        }
+    } 
+}
+
+@include desktop {
+    .nav-bar {
+        &--container {
+            padding: 0 3.9375rem;
+        
+        }
+    }
+}
+
+
+// **********
+// HERO SECTION
+// **********
+
+.hero-section {
+
+    height: 350px;
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 1rem;
+    position: relative;
+
+    &__info-container {
+
+        height: 50%;
+
+        &--album-name {
+            position: relative;
+            color: white;
+            z-index: 1;
+            top: 10%;
+        }
+
+        &--music-name {
+            z-index: 1;
+            position: relative;
+            top: 35%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        
+    }
+
+}
+
+.music-frame {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+}
+
+@include tablet {
+
+
+    .hero-section {
+        height: 29.375rem;
+        padding: 0 2rem;
+    }
+    .music-frame {
+        width: 45%;
+    }
+   
+}
+
+@include desktop {
+    .hero-section {
+        height: 75vh;
+        padding: 0 3.9375rem;
+
+        &__info-container {
+
+            display: block;
+            height: 100%;
+    
+            &--album-name {
+                position: relative;
+                top: 30%;
+            }
+    
+            &--music-name {
+                z-index: 1;
+                position: relative;
+                top: 42%;
+                transform: translateY(-50%);
+                color: white;
+            }
+            
+        }
+    }
+
+    .hero-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .music-frame {
+        width: 45%;
+        // margin-bottom: 5%;
+    }
+
+}
+// MAIN SECTION
+
+.main-section {
+    padding: 0 1rem;
+
+    h2 {
+        padding: 1.5rem 0 1rem 0;
+        color: $bandsite-black
+    }
+
+    &__container {
+        &--image {
+            padding-bottom: 1rem;
+            width: 100%;
+        }
+    }
+
+    p {
+        color: $bandsite-black;
+        padding-bottom: 0.625rem;
+    }
+
+    h3 {
+        color: $bandsite-black;
+        padding: 1rem 0;
+    }
+}
+
+@include tablet {
+    .main-section {
+        padding: 0 2.25rem;
+
+        h2 {
+            padding: 3rem 0 1.5rem 0;
+        }
+
+        &__container {
+            position: relative;
+            left: 10%;
+            width: 80%;
+            padding-bottom: 2.25rem;
+            
+
+            &--image {
+                width: 100%;
+            }
+        }
+
+        &__content-container {
+            display: flex;
+            gap: 1.875rem;
+        }
+
+        h3 {
+            padding-top: 1.875rem;
+        }
+    }
+}
+
+@include desktop {
+    .main-section {
+        padding: 0 3.9375rem;
+
+        h2 {
+            padding: 3rem 0 2.25rem 0rem;
+        }
+    }
+}
+
+// *************
+// FOOTER SECTION
+// **************
+
+.footer-section {
+    background-color: $bandsite-black;
+    color: white;
+    padding: 1.5rem 1rem;
+    
+
+    &--icons {
+        padding: 0.875rem 0;
+        display: flex;
+        list-style-type: none;
+        gap: 1.875rem;
+    }
+
+    &__locations {
+        padding-bottom: 1.875rem;
+        display: flex;
+        flex-direction: column;  
+
+        &--email {
+            margin: 1rem 0;
+        }
+
+        &--address {
+            padding: 0;
+            line-height: 130%;
+        }
+        
+        &--title:nth-child(n+2) {
+            padding-bottom: 1.25rem;
+        }
+    }
+
+    &__copyright {
+        font-size: 0.625rem;
+    }
+}
+
+.footer-logo--top {
+    display: none;
+}
+
+@include tablet {
+
+    .footer-section{
+
+        padding: 3rem 2.25rem 1.25rem 2.25rem;
+
+        &__locations {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 4.0625rem;
+        }
+
+        &__top-section {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            &--left {
+            display: flex;
+            gap: 1.875rem;
+            padding-bottom: 1.875rem;
+            }   
+
+
+        }
+    }
+
+    .footer-logo--top {
+        display: block;
+        // position: relative;
+        // left: 39.5%;
+    }
+
+    .footer-logo--bottom {
+        display: none;
+    }
+}
+
+@include desktop {
+    .footer-section {
+        padding: 2.375rem 3.9375rem 1.25rem 3.9375rem;
+    }
+
+    .footer-logo--top {
+        display: block;
+        // position: relative;
+        // left: 51.5%;
+    }
+
+}

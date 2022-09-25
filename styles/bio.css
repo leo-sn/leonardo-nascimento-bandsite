@@ -100,11 +100,37 @@ a {
   height: 100%;
 }
 
-#profile-image {
+.profile-image {
   background-color: red;
   width: 36px;
   height: 36px;
   border-radius: 50%;
+}
+
+.comment-section h3 {
+  margin: 0;
+  font-size: 100%;
+}
+.comment-section-history {
+  display: flex;
+}
+.comment-section__information {
+  width: 100%;
+}
+.comment-section__information--namedate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-owner {
+  color: rgb(50, 50, 50);
+}
+
+.comment-date {
+  color: rgb(175, 175, 175);
+  font-size: 13px;
+  font-family: AvenirRegular;
 }
 
 .nav-bar--container {

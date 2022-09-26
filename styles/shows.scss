@@ -194,35 +194,54 @@
     }
 
 }
-// MAIN SECTION
+
+
+// ********************
+// MAIN SECTION - TABLE
+// ********************
+
 
 .main-section {
     padding: 0 1rem;
 
     h2 {
         padding: 1.5rem 0 1rem 0;
-        color: $bandsite-black
+        color: $bandsite-black;
     }
 
-    &__container {
-        &--image {
-            padding-bottom: 1rem;
-            width: 100%;
+    &__table-header {
+        display: none;
+    }
+
+    &__table {
+        &--header-mobile {
+            color: $silver;
+            margin-bottom: 8px;
+        }
+
+        &--data {
+            margin-bottom: 10px;
+        }
+
+        &--desktop-data {
+            display: none;
         }
     }
 
     p {
-        color: $bandsite-black;
-        padding-bottom: 0.625rem;
+        line-height: 100%;
     }
 
-    h3 {
-        color: $bandsite-black;
-        padding: 1rem 0;
-    }
+
+}
+
+.td-header {
+    display: none;
 }
 
 @include tablet {
+
+
     .main-section {
         padding: 0 2.25rem;
 
@@ -230,27 +249,57 @@
             padding: 3rem 0 1.5rem 0;
         }
 
-        &__container {
-            position: relative;
-            left: 10%;
-            width: 80%;
-            padding-bottom: 2.25rem;
-            
+        &__table {
 
-            &--image {
-                width: 100%;
+            &--entry {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+                .std-button {
+                    width: 35%;
+                    padding: 0;
+                
+                }
+            }
+
+            &--data {
+                margin: 0;
+            }
+
+            &--entry-data {
+                width: 50%;
+                margin: 0;
+            }
+
+            &--entry-header {
+                width: calc(100% * (1/4) + 2%);
+
+                .table-data {
+                    color: $silver;
+                }
+            }
+
+            &--header-mobile {
+                display: none;
             }
         }
 
-        &__content-container {
-            display: flex;
-            gap: 1.875rem;
+        &__table-header {
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
         }
 
-        h3 {
-            padding-top: 1.875rem;
-        }
+
     }
+
+    // .td-header {
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     gap: 23.3%;
+    // }
+
 }
 
 @include desktop {

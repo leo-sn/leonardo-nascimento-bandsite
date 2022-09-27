@@ -135,7 +135,6 @@ function displayComment(entry) {
 function parseEntries (entries) {
 
     clearAllComments(commentList)
-    console.log(entries);
 
     // entries.reverse().forEach((entry) => {
     //     displayComment(entry)

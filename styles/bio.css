@@ -27,6 +27,12 @@
   border-top: 2px solid rgb(225, 225, 225);
 }
 
+.divider-shows {
+  margin: 15px 0;
+  border: 0;
+  border-top: 2px solid rgb(225, 225, 225);
+}
+
 .overlay {
   background-color: rgba(50, 50, 50, 0.5);
   position: absolute;

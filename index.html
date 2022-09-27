@@ -7,6 +7,7 @@
         <title>Bandsite</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles/bio.css">
+        <script src="./scripts/index-page.js" defer></script>
     </head>
     <body>
 
@@ -72,12 +73,12 @@
                 
                 <div class="comment-section__submit-container">
                     <div id="form-profile-image" class="comment-section__image-container">
-                        <div class="profile-image">
+                        <div class="profile-image-std">
                         </div>
                     </div>
                     
                     <div class="comment-section__form-container">
-                        <form class="comment-form" >
+                        <form class="comment-form" id="comment-form">
                             <label class="comment-form--input-label" for="user_name">NAME</label><br>
                             <input type="text" name="user_name" placeholder="Enter your name"><br>
                             <label class="comment-form--input-label" for="user_comment">COMMENT</label><br>
@@ -85,29 +86,10 @@
                             <button type="submit" class="comment-form--button std-button">COMMENT</button>
                         </form>
                     </div>
-
-                    
                 </div>
-                <hr class="divider">
-
                 <!-- COMMENT HISTORY SECTION - THIS IS ENTERED VIA JS -->
-                
-                <div class="comment-section-history">
-                    <div class="comment-section__image-container" >
-                        <div class="profile-image"></div>
-                    </div>
-                    <div class="comment-section__information">
-                        <div class="comment-section__information--namedate">
-                            <h3 class="comment-owner">Connor Walton</h3>
-                            <h4 class="comment-date">02/15/2021</h4>
-                        </div>
-                        <div class="comment-section__information--comment">
-                            <p class="comment-data">This is art. This is inexplicable magic expressed....This is art. This is inexplicable magic expressed....This is art. This is inexplicable magic expressed....This is art. This is inexplicable magic expressed....</p>
-                        </div>
-                    </div>
-
-                </div>
-                <hr class="divider">
+                <div id="comment-form-entries">
+                </div>                
             </div>
         </section>
         <!-- END OF COMMENT SECTION -->

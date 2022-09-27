@@ -101,7 +101,7 @@ a {
 }
 
 .profile-image {
-  background-color: red;
+  background-color: rgb(225, 225, 225);
   width: 36px;
   height: 36px;
   border-radius: 50%;

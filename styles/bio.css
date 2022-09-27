@@ -101,7 +101,7 @@ a {
 }
 
 .profile-image {
-  background-color: red;
+  background-color: rgb(225, 225, 225);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -552,6 +552,12 @@ a {
 .comment-section .profile-image {
   width: 36px;
   height: 36px;
+  background-size: cover;
+  border-radius: 50%;
+}
+.comment-section .profile-image-std {
+  width: 36px;
+  height: 36px;
   background-image: url(../assets/images/Mohan-muruge.jpg);
   background-size: cover;
   border-radius: 50%;
@@ -605,6 +611,10 @@ a {
     padding: 48px 36px 48px 24px;
   }
   .comment-section .profile-image {
+    width: 48px;
+    height: 48px;
+  }
+  .comment-section .profile-image-std {
     width: 48px;
     height: 48px;
   }

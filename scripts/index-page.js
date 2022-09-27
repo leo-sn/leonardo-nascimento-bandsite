@@ -45,7 +45,8 @@ function addComment (event) {
         //and transform to DD/MM/YYYY
         timestamp: new Date().toLocaleDateString("en-UK"),
         name: form.user_name.value,
-        comment: form.user_comment.value
+        comment: form.user_comment.value,
+        imgUrl: "",
     }
 
     //Adding the newObj into the comments array.
@@ -134,15 +135,18 @@ function displayComment(entry) {
 function parseEntries (entries) {
 
     clearAllComments(commentList)
+    console.log(entries);
 
-    entries.reverse().forEach((entry) => displayComment(entry))
+    // entries.reverse().forEach((entry) => {
+    //     displayComment(entry)
+    // })
 
     // THE FOR EACH EXPRESSION AS FOR LOOP - reversed
 
-    // for(i = entries.length-1; i >= 0; i--) {
-    //     let entry = entries[i];
-    //     displayComments(entry);
-    // }
+    for(i = entries.length-1; i >= 0; i--) {
+        let entry = entries[i];
+        displayComment(entry);
+    }
 }
 
 // Forcing parseEntries to run so it loads first run with original array entries

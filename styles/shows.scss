@@ -52,6 +52,12 @@
   
 }
 
+.navactive {
+    border-bottom: 0.25rem white solid;
+    font-family: AvenirNext;
+    font-weight: 600;
+}
+
 @include tablet {
 
     .nav-bar {

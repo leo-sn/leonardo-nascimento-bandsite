@@ -176,6 +176,12 @@ a {
   font-weight: 600;
 }
 
+.navactive {
+  border-bottom: 0.25rem white solid;
+  font-family: AvenirNext;
+  font-weight: 600;
+}
+
 @media screen and (min-width: 768px) {
   .nav-bar--container {
     flex-direction: row;

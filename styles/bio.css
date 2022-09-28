@@ -167,11 +167,15 @@ a {
 }
 .nav-bar--menus-menu:hover {
   border-bottom: 0.25rem white solid;
-  font-family: AvenirNext;
-  font-weight: 400;
+  font-family: AvenirRegular;
 }
 .nav-bar--menus-menu:active {
-  border-bottom: 4px white solid;
+  border-bottom: 0.25rem white solid;
+  font-family: AvenirDemi;
+}
+
+.navactive {
+  border-bottom: 0.25rem white solid;
   font-family: AvenirNext;
   font-weight: 600;
 }

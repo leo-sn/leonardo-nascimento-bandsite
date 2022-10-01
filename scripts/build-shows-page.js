@@ -51,6 +51,13 @@ function showEntry(shows) {
 }
 
 
+axios
+    .get("https://project-1-api.herokuapp.com/register")
+    .then((resp) => {
+        apiKey = resp.data.api_key;
+        
+    })
+
 let showsContainer = document.getElementById('shows-container');
 
 function displayShows(show) {
@@ -91,9 +98,6 @@ function displayShows(show) {
     thirdDiv.appendChild(createP4);
 
     firstDiv.appendChild(thirdDiv);
-
-
-
 
 
     let forthDiv = document.createElement('div');

@@ -4,37 +4,38 @@
 
 //Creating inital Array
 let shows = [
-    {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-    url: "",
-},{
-    date:"Tue Sept 21 2021",
-    venue:"Pier 3 East",
-    location:"San Francisco, CA",
-    url:"",
-},{
-    date:"Fri Oct 15 2021",
-    venue:"View Lounge",
-    location:"San Francisco, CA",
-    url:"",
-},{
-    date:"Sat Nov 06 2021",
-    venue:"Hyatt Agency",
-    location:"San Francisco, CA",
-    url:"",
-},{
-    date:"Fri Nov 26 2021",
-    venue:"Moscow Center",
-    location:"San Francisco, CA",
-    url:"",
-},{
-    date:"Wed Dec 15 2021 ",
-    venue:"Press Club",
-    location:"San Francisco, CA",
-    url:"",
-}];
+//     {
+//     date: "Mon Sept 06 2021",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA",
+//     url: "",
+// },{
+//     date:"Tue Sept 21 2021",
+//     venue:"Pier 3 East",
+//     location:"San Francisco, CA",
+//     url:"",
+// },{
+//     date:"Fri Oct 15 2021",
+//     venue:"View Lounge",
+//     location:"San Francisco, CA",
+//     url:"",
+// },{
+//     date:"Sat Nov 06 2021",
+//     venue:"Hyatt Agency",
+//     location:"San Francisco, CA",
+//     url:"",
+// },{
+//     date:"Fri Nov 26 2021",
+//     venue:"Moscow Center",
+//     location:"San Francisco, CA",
+//     url:"",
+// },{
+//     date:"Wed Dec 15 2021 ",
+//     venue:"Press Club",
+//     location:"San Francisco, CA",
+//     url:"",
+// }
+];
 
 
 //THIS FUNCTIONS RUNS THROUGH THE shows ARRAY AND CALL THE displayShows FUNCTION
@@ -43,20 +44,63 @@ let shows = [
 function showEntry(shows) {
 
     for (i = 0; i < shows.length; i++) {
-        
         let show = shows[i];
-
         displayShows(show);
     }
 }
 
+let apiKey = '';
 
-axios
-    .get("https://project-1-api.herokuapp.com/register")
+function getApiKey() {
+
+    if(apiKey = ''){
+        return axios.get("https://project-1-api.herokuapp.com/register")
+        .then((resp) => {
+            apiKey = resp.data.api_key;
+            return Promise.resolve(apiKey)
+    })} 
+    else {
+        return Promise.resolve(apiKey)
+    }
+}
+
+function getShowDates() {
+    getApiKey()
+    .then((apiKey) => axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}/`))
+    .then((res) => {
+       shows = res.data
+       showEntry(shows)
+    })
+    .catch(err => console.log(err));
+}
+
+function formatDateShow(timestamp) {
+
+    var date = new Date(timestamp);
+    return date.toDateString();
+
+    // var mdate = date.getDate();
+    // var year = date.getFullYear();
+    // var month = date.getMonth() + 1;
+    // var day = date.getDay();
+    // var daysOfTheWeek = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+    // var daysOfTheMonth = ['January','February','March','April','May','','','','','','','']
+
+}
+
+getShowDates()
+
+axios.get("https://project-1-api.herokuapp.com/register")
     .then((resp) => {
         apiKey = resp.data.api_key;
-        
+        return apiKey
     })
+    .then((apiKey) => {
+        axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}/`)
+        .then((resp) => console.log(resp));
+    })
+    .catch(err => console.log(err));
+
 
 let showsContainer = document.getElementById('shows-container');
 
@@ -75,7 +119,7 @@ function displayShows(show) {
     let createP2 = document.createElement('p');
     createP2.classList.add('main-section__table--data');
     createP2.classList.add('semi-bold');
-    createP2.innerText = show.date;
+    createP2.innerText = formatDateShow(show.date);
 
     secondDiv.appendChild(createP1);
     secondDiv.appendChild(createP2);
@@ -92,7 +136,7 @@ function displayShows(show) {
 
     let createP4 = document.createElement('p');
     createP4.classList.add('main-section__table--data');
-    createP4.innerText = show.venue;
+    createP4.innerText = show.place;
 
     thirdDiv.appendChild(createP3);
     thirdDiv.appendChild(createP4);
@@ -130,5 +174,3 @@ function displayShows(show) {
     showsContainer.appendChild(firstDiv);
     showsContainer.appendChild(createDivider);
 }
-
-showEntry(shows)

@@ -40,19 +40,21 @@ let shows = [
 
 //THIS FUNCTIONS RUNS THROUGH THE shows ARRAY AND CALL THE displayShows FUNCTION
 //FOR EACH OBJECT
-
 function showEntry(shows) {
-
     for (i = 0; i < shows.length; i++) {
         let show = shows[i];
         displayShows(show);
     }
 }
 
+//CREATE API EMPTY STRING
 let apiKey = '';
 
+
+//CREATNING FUNCTION TO GRAB THE API KEY AND RETURN A PROMISE
 function getApiKey() {
 
+    //CHECKING IF API KEY EXISTS - IF NOT, GET THE KEY AND RETURN AS PROMISE - OTHERWISE, RETURN THEY KEY AS PROMISE
     if(apiKey = ''){
         return axios.get("https://project-1-api.herokuapp.com/register")
         .then((resp) => {
@@ -64,43 +66,33 @@ function getApiKey() {
     }
 }
 
+//GET SHOW DATES FROM API BY CHAININIG THE REQUEST.
 function getShowDates() {
     getApiKey()
     .then((apiKey) => axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}/`))
     .then((res) => {
        shows = res.data
        showEntry(shows)
+       console.log(res);
     })
     .catch(err => console.log(err));
 }
 
-function formatDateShow(timestamp) {
 
+//FORMATTING EPOCH DATE
+function formatDateShow(timestamp) {
     var date = new Date(timestamp);
-    return date.toDateString();
+    return date.toDateString(); // THIS WILL RETURN THE DATE IN THE FORMAT > WEEKDAY MONTH DATE YEAR
 
     // var mdate = date.getDate();
     // var year = date.getFullYear();
     // var month = date.getMonth() + 1;
     // var day = date.getDay();
     // var daysOfTheWeek = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
-    // var daysOfTheMonth = ['January','February','March','April','May','','','','','','','']
-
+    // var daysOfTheMonth = ['January','February','March','April','May','June','July','August','September','October','November','December']
 }
 
 getShowDates()
-
-axios.get("https://project-1-api.herokuapp.com/register")
-    .then((resp) => {
-        apiKey = resp.data.api_key;
-        return apiKey
-    })
-    .then((apiKey) => {
-        axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}/`)
-        .then((resp) => console.log(resp));
-    })
-    .catch(err => console.log(err));
-
 
 let showsContainer = document.getElementById('shows-container');
 

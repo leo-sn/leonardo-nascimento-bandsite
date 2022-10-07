@@ -2,24 +2,24 @@
 //Sample starting Array
 
 let entries = [
-    {
-        timestamp: "12/20/2020",
-        name: "Miles Acosta",
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-        imgUrl:"",
-    },
-    {
-        timestamp: "01/09/2021",
-        name: "Emilie Beach",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        imgUrl:"",
-    },
-    {
-        timestamp: "02/17/2021",
-        name: "Connor Walton",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-        imgUrl:"",
-    }
+    // {
+    //     timestamp: "12/20/2020",
+    //     name: "Miles Acosta",
+    //     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+    //     imgUrl:"",
+    // },
+    // {
+    //     timestamp: "01/09/2021",
+    //     name: "Emilie Beach",
+    //     comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+    //     imgUrl:"",
+    // },
+    // {
+    //     timestamp: "02/17/2021",
+    //     name: "Connor Walton",
+    //     comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+    //     imgUrl:"",
+    // }
 ]
 
 // *******************************
@@ -48,7 +48,6 @@ function addComment (event) {
         comment: form.user_comment.value,
         imgUrl: "",
     }
-
     //Adding the newObj into the comments array.
     entries.push(newObj);
 
@@ -113,7 +112,7 @@ function displayComment(entry) {
 
     let newh4 = document.createElement('h4');
     newh4.classList.add('comment-date');
-    newh4.innerText = entry.timestamp;
+    newh4.innerText = formatDateComments(entry.timestamp);
     thirdDiv.appendChild(newh4);
 
     let forthDiv = document.createElement('div');
@@ -132,7 +131,38 @@ function displayComment(entry) {
     commentList.appendChild(firstDiv);    
 }
 
-function parseEntries (entries) {
+function getApiKey() {
+
+    //CHECKING IF API KEY EXISTS - IF NOT, GET THE KEY AND RETURN AS PROMISE - OTHERWISE, RETURN THEY KEY AS PROMISE
+    if(apiKey = ''){
+        return axios.get("https://project-1-api.herokuapp.com/register")
+        .then((resp) => {
+            apiKey = resp.data.api_key;
+            return Promise.resolve(apiKey)
+    })} 
+    else {
+        return Promise.resolve(apiKey)
+    }
+}
+
+function formatDateComments (timestamp){
+    var date = new Date(timestamp)
+    return date.toISOString().replaceAll('-','/').split('T')[0];
+}
+
+function loadComments() {
+
+    getApiKey()
+    .then((apiKey) => axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}/`))
+    .then((res) => {
+        entries = res.data
+        console.table(entries)})
+    .then((entries) => parseEntries(entries))
+    .catch(err => console.log(err))
+
+}
+
+function parseEntries () {
 
     clearAllComments(commentList)
 
@@ -142,14 +172,14 @@ function parseEntries (entries) {
 
     // THE FOR EACH EXPRESSION AS FOR LOOP - reversed
 
-    for(i = entries.length-1; i >= 0; i--) {
+    for(i = 0; i < entries.length ; i++) {
         let entry = entries[i];
         displayComment(entry);
     }
 }
 
 // Forcing parseEntries to run so it loads first run with original array entries
-parseEntries(entries);
+loadComments();
 
 
 

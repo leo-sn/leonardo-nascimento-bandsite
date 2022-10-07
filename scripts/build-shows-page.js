@@ -82,6 +82,7 @@ function getShowDates() {
 //FORMATTING EPOCH DATE
 function formatDateShow(timestamp) {
     var date = new Date(timestamp);
+   
     return date.toDateString(); // THIS WILL RETURN THE DATE IN THE FORMAT > WEEKDAY MONTH DATE YEAR
 
     // var mdate = date.getDate();

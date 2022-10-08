@@ -397,6 +397,9 @@
         width: 100%;
     }
 
+    .error {
+        border-color: #ff0000;
+    }
     .comment-form {
         width: 100%;
 
@@ -412,8 +415,9 @@
             background-color: $alabaster;
             
 
-            &:active {
-                border-color: black;
+            &:focus {
+                outline: none;
+                border: 1px solid $bandsite-black;
             }
         }
 
@@ -428,6 +432,13 @@
             font-size: 12px;
             resize: none;
             background-color: $alabaster;
+
+            &:focus{
+            
+                outline: none;
+                border: 1px solid $bandsite-black;
+                
+            }
 
         }
 

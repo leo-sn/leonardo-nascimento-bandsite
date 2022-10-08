@@ -70,6 +70,7 @@
 
         &__logo-container--logo {
             padding: 0;
+            margin: 0 2rem 0 0;
         }
 
         &--menus {
@@ -83,7 +84,7 @@
             width: fit-content;
             margin: 0.0625rem 2.25rem;
             padding: 1.5625rem 0;
-            margin: 0 2.25rem;
+            margin: 1.5rem;
 
             &:hover {
                 border-bottom: 0.25rem white solid;

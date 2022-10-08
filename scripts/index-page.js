@@ -30,7 +30,27 @@ let entries = [
 const form = document.getElementById('comment-form');
 
 // Adding a listener to the form and running a function when submitted
-form.addEventListener('submit', addComment);
+form.addEventListener('submit', (event) => {
+
+    event.preventDefault();
+    let nameInput = document.querySelector('.nameInput');
+    let commentInput = document.querySelector('.commentInput');
+
+    if(!event.target.user_name.value){
+        nameInput.style.borderColor = 'red';
+        console.log('NAME ERROR!')
+    }
+    if(!event.target.user_comment.value){
+        commentInput.style.borderColor = 'red';
+        console.log('COMMENT ERROR!')
+    }
+    if(event.target.user_comment.value && event.target.user_name.value) {
+        nameInput.style.borderColor = 'rgb(225, 225, 225)';
+        commentInput.style.borderColor = 'rgb(225, 225, 225)';
+        addComment(event)
+        
+    }}
+);
 
 
 //Creating function to add things to the comments array
@@ -54,8 +74,14 @@ function addComment (event) {
         return axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}/`,{
         name: form.user_name.value, comment: form.user_comment.value}) 
     })
-    .then(() => loadComments())
+    .then(() => {
+        loadComments()
+        event.target.reset()
+    })
+    
     .catch(err => console.log(err))
+
+    
 }
 
 
@@ -139,7 +165,6 @@ let apiKey = '';
 
 function getApiKey() {
     return new Promise((resolve) => {
-        console.log(apiKey)
         if(apiKey === ''){
             return axios.get("https://project-1-api.herokuapp.com/register")
             .then((resp) => {
@@ -172,7 +197,7 @@ function loadComments() {
             return a.timestamp - b.timestamp;
         });
 
-        return parseEntries(entries)})
+        parseEntries(entries)})
     .catch(err => console.log(err))
 
 }

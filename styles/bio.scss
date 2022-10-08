@@ -368,20 +368,20 @@
     color: $bandsite-black;
 
     &__image-container {
-        margin-right: 10px;
-        padding-top: 10px;
+        margin-right: 0.625rem;
+        padding-top: 0.625rem;
     }
 
 
     .profile-image {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         background-size: cover;
         border-radius: 50%;
     }
     .profile-image-std {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         background-image: url(../assets/images/Mohan-muruge.jpg);
         background-size: cover;
         border-radius: 50%;
@@ -404,39 +404,39 @@
         width: 100%;
 
         input {
-            border: 1px solid;
-            margin: 4px 0 10px 0;
-            height: 36px;
+            border: 0.0625rem solid;
+            margin: 0.25rem 0 0.625rem 0;
+            height: 2.25rem;
             width: 100%;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             border-color: $mercury;
-            padding: 12px;
-            font-size: 12px;
+            padding: 0.75rem;
+            font-size: 0.75rem;
             background-color: $alabaster;
             
 
             &:focus {
                 outline: none;
-                border: 1px solid $bandsite-black;
+                border: 0.0625rem solid $bandsite-black;
             }
         }
 
         textarea {
-            border: 1px solid;
-            margin: 4px 0 10px 0;
-            height: 100px;
+            border: 0.0625rem solid;
+            margin: 0.25rem 0 0.625rem 0;
+            height: 6.25rem;
             width: 100%;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             border-color: $mercury;
-            padding: 12px;
-            font-size: 12px;
+            padding: 0.75rem;
+            font-size: 0.75rem;
             resize: none;
             background-color: $alabaster;
 
             &:focus{
             
                 outline: none;
-                border: 1px solid $bandsite-black;
+                border: 0.0625rem solid $bandsite-black;
                 
             }
 
@@ -444,11 +444,11 @@
 
         &--input-label {
         color: $mercury;
-        font-size: 10px;
+        font-size: 0.625rem;
         }
 
         &--button {
-            margin-top: 10px;
+            margin-top: 0.625rem;
         }
 
     }
@@ -458,16 +458,16 @@
 @include tablet {
 
     .comment-section {
-        padding: 48px 36px 48px 24px;
+        padding: 3rem 2.25rem 3rem 1.5rem;
 
         .profile-image {
-            width: 48px;
-            height: 48px;
+            width: 3rem;
+            height: 3rem;
         }
 
         .profile-image-std {
-            width: 48px;
-            height: 48px;
+            width: 3rem;
+            height: 3rem;
         }
 
         &__container {
@@ -475,7 +475,7 @@
         }
 
         h2 {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
             font-family: AvenirDemi;
         }
 
@@ -485,12 +485,12 @@
         }
 
         &__image-container {
-            padding-top: 5px;
+            padding-top: 0.3125rem;
         }
 
         .comment-form {
             input {
-                height: 48px;
+                height: 3rem;
             }
         }
 
@@ -508,7 +508,7 @@
 @include desktop {
     .comment-section {
 
-        padding: 48px 63px 24px 63px;
+        padding: 3rem 3.9375rem 1.5rem 3.9375rem;
 
         &__container {
             padding: 1% 30%;
@@ -516,13 +516,13 @@
 
         .comment-form {
             input {
-                height: 48px;
+                height: 3rem;
             }
         }
     }
 
     #form-profile-image {
-        padding-top: 23px;
+        padding-top: 1.4375rem;
     }
 }
 

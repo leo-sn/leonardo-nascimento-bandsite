@@ -171,7 +171,7 @@ a {
   font-weight: 400;
 }
 .nav-bar--menus-menu:active {
-  border-bottom: 4px white solid;
+  border-bottom: 0.25rem white solid;
   font-family: AvenirNext;
   font-weight: 600;
 }
@@ -248,7 +248,7 @@ a {
   }
 }
 .hero-section {
-  height: 350px;
+  height: 21.875rem;
   background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -276,7 +276,7 @@ a {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 150px;
+  height: 9.375rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -358,10 +358,10 @@ a {
 }
 .main-section__table--header-mobile {
   color: rgb(175, 175, 175);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 .main-section__table--data {
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
 }
 .main-section__table--desktop-data {
   display: none;
@@ -376,7 +376,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .main-section {
-    padding: 50px 2.25rem;
+    padding: 3.125rem 2.25rem;
   }
   .main-section h2 {
     padding: 1rem 0 1.5rem 0;
@@ -399,7 +399,7 @@ a {
   }
   .main-section__table--entry-header {
     width: 27%;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
   }
   .main-section__table--entry-header .table-data {
     color: rgb(175, 175, 175);
@@ -444,13 +444,13 @@ a {
 }
 @media screen and (min-width: 1280px) {
   .main-section {
-    padding: 100px 3.9375rem;
+    padding: 6.25rem 3.9375rem;
     display: flex;
-    gap: 100px;
+    gap: 6.25rem;
     align-items: flex-start;
   }
   .main-section__table {
-    padding-top: 20px;
+    padding-top: 1.25rem;
     width: 70%;
   }
   .main-section h2 {

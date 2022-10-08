@@ -38,11 +38,11 @@ form.addEventListener('submit', (event) => {
 
     if(!event.target.user_name.value){
         nameInput.style.borderColor = 'red';
-        console.log('NAME ERROR!')
+        // console.log('NAME ERROR!')
     }
     if(!event.target.user_comment.value){
         commentInput.style.borderColor = 'red';
-        console.log('COMMENT ERROR!')
+        // console.log('COMMENT ERROR!')
     }
     if(event.target.user_comment.value && event.target.user_name.value) {
         nameInput.style.borderColor = 'rgb(225, 225, 225)';

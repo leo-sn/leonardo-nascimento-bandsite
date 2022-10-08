@@ -40,18 +40,22 @@ function addComment (event) {
     event.preventDefault();
 
     //creates a new object with the information from the form
-    let newObj = {
-        //this will capture the DATE it was submitted
-        //and transform to DD/MM/YYYY
-        timestamp: new Date().toLocaleDateString("en-UK"),
-        name: form.user_name.value,
-        comment: form.user_comment.value,
-        imgUrl: "",
-    }
+    // let newObj = {
+    //     //this will capture the DATE it was submitted
+    //     //and transform to DD/MM/YYYY
+    //     //timestamp: new Date().toLocaleDateString("en-UK"),
+    //     name: form.user_name.value,
+    //     comment: form.user_comment.value,
+    //     // imgUrl: "",
+    // }
     //Adding the newObj into the comments array.
-    entries.push(newObj);
-
-    parseEntries(entries);
+    getApiKey()
+    .then((apiKey) => {
+        return axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}/`,{
+        name: form.user_name.value, comment: form.user_comment.value}) 
+    })
+    .then(() => loadComments())
+    .catch(err => console.log(err))
 }
 
 
@@ -131,18 +135,23 @@ function displayComment(entry) {
     commentList.appendChild(firstDiv);    
 }
 
-function getApiKey() {
+let apiKey = '';
 
+function getApiKey() {
+    return new Promise((resolve) => {
+        console.log(apiKey)
+        if(apiKey === ''){
+            return axios.get("https://project-1-api.herokuapp.com/register")
+            .then((resp) => {
+                apiKey = resp.data.api_key;
+                return resolve(apiKey)
+        })} 
+        else {
+            return resolve(apiKey)
+        }
+    })
     //CHECKING IF API KEY EXISTS - IF NOT, GET THE KEY AND RETURN AS PROMISE - OTHERWISE, RETURN THEY KEY AS PROMISE
-    if(apiKey = ''){
-        return axios.get("https://project-1-api.herokuapp.com/register")
-        .then((resp) => {
-            apiKey = resp.data.api_key;
-            return Promise.resolve(apiKey)
-    })} 
-    else {
-        return Promise.resolve(apiKey)
-    }
+  
 }
 
 function formatDateComments (timestamp){
@@ -155,9 +164,15 @@ function loadComments() {
     getApiKey()
     .then((apiKey) => axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}/`))
     .then((res) => {
-        entries = res.data
-        console.table(entries)})
-    .then((entries) => parseEntries(entries))
+        return entries = res.data
+    })
+    .then((entries) => {
+
+        entries.sort((a, b) => {
+            return a.timestamp - b.timestamp;
+        });
+
+        return parseEntries(entries)})
     .catch(err => console.log(err))
 
 }
@@ -166,15 +181,12 @@ function parseEntries () {
 
     clearAllComments(commentList)
 
-    // entries.reverse().forEach((entry) => {
-    //     displayComment(entry)
-    // })
-
     // THE FOR EACH EXPRESSION AS FOR LOOP - reversed
-
-    for(i = 0; i < entries.length ; i++) {
+    for(i =  entries.length-1; i >= 0 ; i--) {
         let entry = entries[i];
+
         displayComment(entry);
+
     }
 }
 

@@ -1,12 +1,49 @@
-# This is a project for the Brainstation bootcamp.
+# Band Site Project
 
-## Goals of this website:
-1. Develop coding skills in HTML, CSS, SASS, JavaScript, and RestAPI.
-2. Develop Git skills and version control.
-3. Understand web structure and
+## Table of Contents
 
-## Instructions:
-To visualize this web project in your computer, please download the .zip file that contains all the project files.
-After downloading it, unzip the folder and open with your VSCode. 
-In order to visualize this project, you will need to have installed a preprocessor called "Saas".
-After having it confugired in your VSCode, you 
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+<!-- - [Acknowledgements](#acknowledgements)-->
+
+## Overview
+
+<!-- TODO: Add a screenshot of the live project.
+    1. Link to a 'live demo.'
+    2. Describe your overall experience in a couple of sentences.
+    3. List a few specific technical things that you learned or improved on.
+    4. Share any other tips or guidance for others attempting this or something similar.
+ -->
+ 
+  1. This is a project based on Brainstations' provided mockup.'
+  2. Band Site project 
+  3. This projec about mobile first design approach, UX/UI, JavaScript interactivity, and RestAPI requests.
+  4. To see how it looks like, please access the following github pages link: 
+  [Github Pages](https://leo-sn.github.io/leonardo-nascimento-bandsite/).
+
+### Built With
+
+<!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
+This project was built using:
+  1. HTML
+  2. CSS
+  3. Sass
+  4. JavaScript
+  5. Restful API.
+
+## Features
+
+<!-- TODO: List what specific 'user problems' that this application solves. -->
+It is a mobile first application approach that allows a better user experience.
+This application contain a comment section that fetches and store data from a Restful API.
+
+## Contact
+
+<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. LinkedIn and dev.to are minimum. -->
+For more, feel free to contact me through my [LinkedIn Page](https://www.linkedin.com/in/leonardosn/)
+
+<!-- ## Acknowledgements -->
+
+<!-- TODO: List any blog posts, tutorials or plugins that you may have used to complete the project. Only list those that had a significant impact. Obviously, we all 'Google' stuff while working on our things, but maybe something in particular stood out as a 'major contributor' to your skill set for this project. -->
